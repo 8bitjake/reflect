@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" type="image/svg+xml" href="./images/icon.svg" />
     <title>Reflect - Write Down Everything</title>
+    <link rel="icon" type="image/svg+xml" href="./images/icon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./libraries/vue.min.js" defer></script>
     <script src="./js/index.js" type="module"></script>
     <link rel="stylesheet" href="./css/style.css" />
-    <meta http-equiv="refresh" content="0; URL=/reflect" />
+
+    <meta property="og:title" content="Reflect, the smoothest notepad ever." />
+    <meta property="og:url" content="http://TheColaber.github.io/reflect" />
+<meta property="og:image" content="http://8bitjake.github.io/reflect-but-better/og-logo.png"/> <! -- make sure to change this once you merge, idk how to move png files so you can do that -->
+    <meta
+      property="og:description"
+      content="Using advanced technology to create the smoothest notepad ever."
+    />
   </head>
-  <body></body>
-</html>
+  <body>
+    <div id="app">
+      <div
+        style="display: none;"
+        v-show="true"
+        :class="{
+          darkMode: darkMode
+        }"
+        class="wrapper"
+      >
+        <div
+          class="sidebar"
+          :class="{
+            show: showSidebar
+          }"
+          v-click-outside="hideSidebar"
+        >
+          <span class="title">
+            <img src="./images/icon.svg" />
+            Reflect</span
+          >
+          <div class="content">
