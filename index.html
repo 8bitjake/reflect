@@ -78,12 +78,6 @@
                 v-for="icon of icons"
                 :class="'icon-' + icon.id"
               >
-                          <div class="open-sidebar">
-          <img
-            src="./images/left.svg"
-            v-title="'Toggle Sidebar'"
-            @click.stop="showSidebar = true"
-          />
                 <img :src="icon.path" @click="icon.click" v-title="icon.name" />
               </div>
             </div>
@@ -93,6 +87,12 @@
         <div class="text-content" v-if="loaded && selected != null">
           <div class="file-title">
             <span>{{ files[selected].name }}</span>
+          <div class="open-sidebar">
+          <img
+            src="./images/left.svg"
+            v-title="'Toggle Sidebar'"
+            @click.stop="showSidebar = true"
+          />
             <img
               src="./images/edit.svg"
               v-title="'Rename File'"
