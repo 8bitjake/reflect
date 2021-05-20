@@ -9,15 +9,12 @@
     <script src="./js/index.js" type="module"></script>
     <link rel="stylesheet" href="./css/style.css" />
 
-    <meta property="og:title" content="Reflect - The smoothest notepad ever" />
+    <meta property="og:title" content="Reflect. The smoothest notepad ever." />
     <meta property="og:url" content="http://TheColaber.github.io/reflect" />
-    <meta
-      property="og:image"
-      content="http://TheColaber.github.io/reflect/images/logo.svg"
-    />
+    <meta property="og:image" content="http://8bitjake.github.io/reflect-but-better/og-logo.png"/> // make sure to change this once you merge, idk how to move png files so you can do that
     <meta
       property="og:description"
-      content="Using advanced technology to create the smoothest notepad ever!"
+      content="Using advanced technology to create the smoothest notepad ever."
     />
   </head>
   <body>
@@ -83,21 +80,10 @@
             </div>
           </div>
         </div>
-        <div class="open-sidebar">
-          <img
-            src="./images/left.svg"
-            v-title="'Toggle Sidebar'"
-            @click.stop="showSidebar = true"
-          />
         </div>
         <div class="text-content" v-if="loaded && selected != null">
           <div class="file-title">
             <span>{{ files[selected].name }}</span>
-                   <img
-            src="./images/left.svg"
-            v-title="'Toggle Sidebar'"
-            @click.stop="showSidebar = true"
-          />
             <img
               src="./images/edit.svg"
               v-title="'Rename File'"
