@@ -9,7 +9,7 @@
     <script src="./js/index.js" type="module"></script>
     <link rel="stylesheet" href="./css/style.css" />
 
-    <meta property="og:title" content="Reflect. The smoothest notepad ever." />
+    <meta property="og:title" content="Reflect - The smoothest notepad ever" />
     <meta property="og:url" content="http://TheColaber.github.io/reflect" />
     <meta
       property="og:image"
@@ -17,7 +17,7 @@
     />
     <meta
       property="og:description"
-      content="Using advanced technology to create the smoothest notepad ever."
+      content="Using advanced technology to create the smoothest notepad ever!"
     />
   </head>
   <body>
@@ -83,11 +83,17 @@
             </div>
           </div>
         </div>
+        <div class="open-sidebar">
+          <img
+            src="./images/left.svg"
+            v-title="'Toggle Sidebar'"
+            @click.stop="showSidebar = true"
+          />
         </div>
         <div class="text-content" v-if="loaded && selected != null">
           <div class="file-title">
             <span>{{ files[selected].name }}</span>
-          <img
+                   <img
             src="./images/left.svg"
             v-title="'Toggle Sidebar'"
             @click.stop="showSidebar = true"
