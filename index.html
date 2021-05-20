@@ -63,12 +63,6 @@
               :class="{ nohover: creatingFile }"
               @click.stop="creatingFile = true"
             >
-          <div class="open-sidebar">
-          <img
-            src="./images/left.svg"
-            v-title="'Toggle Sidebar'"
-            @click.stop="showSidebar = true"
-          />
               <span v-if="!creatingFile">Add New File</span>
               <input
                 @keyup.enter="createFile(newFileName)"
@@ -84,6 +78,12 @@
                 v-for="icon of icons"
                 :class="'icon-' + icon.id"
               >
+                          <div class="open-sidebar">
+          <img
+            src="./images/left.svg"
+            v-title="'Toggle Sidebar'"
+            @click.stop="showSidebar = true"
+          />
                 <img :src="icon.path" @click="icon.click" v-title="icon.name" />
               </div>
             </div>
