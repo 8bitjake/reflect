@@ -21,6 +21,52 @@ body {
   height: 100vh;
   background-color: #000011;
 }
+
+#app {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  background: var(--background);
+
+  --background: #ffffee;
+  --content-color: #000;
+  --content-background: #00000005;
+  --content-focus-background: #0000000a;
+  --bottom-border-background: #000;
+  --selection-background: #00000022;
+  --small-sidebar-background: #ffffffaa;
+}
+.wrapper.darkMode {
+  --background: #000011;
+  --content-color: #fff;
+  --content-background: #ffffff0f;
+  --content-focus-background: #ffffff15;
+  --bottom-border-background: #fff;
+  --selection-background: #ffffff22;
+  --small-sidebar-background: #000000aa;
+}
+.wrapper.darkMode .file-title img {
+  filter: invert(1);
+}
+.wrapper.darkMode .open-sidebar img {
+  filter: none;
+}
+
+.wrapper *::selection {
+  background: var(--selection-background);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 300px;
+  overflow-y: auto;
+  margin: 8px;
+}
 span.title:hover {
   background: #94d2ff6e;
   padding-left: 40px;
