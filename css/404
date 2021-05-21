@@ -1,10 +1,11 @@
 @import url("../libraries/sora.css");
 
 a {
-color:#34a8eb
+color:#34a8eb !important
 * {
   font-family: Sora, sans-serif;
   transition: all 0.2s ease;
+  font-color: white;
 }
 img {
   user-drag: none;
